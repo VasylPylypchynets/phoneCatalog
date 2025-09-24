@@ -1,0 +1,126 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-elements);
+  border-radius: 16px;
+  padding: 24px;
+  gap: 16px;
+  background-color: var(--color-black-white);
+
+  @include on-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__price {
+    min-width: 84px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    &-links {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+
+      @include on-tablet {
+        gap: 24px;
+      }
+    }
+  }
+
+  &__prodcut-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__prodcut-name {
+    text-decoration: none;
+
+    @include typography-body-text;
+
+    color: var(--color-primary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 96px;
+  }
+
+  &__counter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--color-elements);
+    background-color: transparent;
+    color: var(--color-elements);
+    transition: all 0.3s ease-in-out;
+
+    &--active {
+      color: var(--color-primary);
+      border-color: var(--color-icons);
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
+  &__counter-value {
+    @include typography-body-text;
+
+    color: var(--color-primary);
+  }
+
+  &__cancel-icon {
+    cursor: pointer;
+  }
+}

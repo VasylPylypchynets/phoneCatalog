@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
+
+.footer {
+  background-color: var(--color-black-white);
+  width: 100%;
+  height: $footer-height-mobile;
+  box-sizing: border-box;
+
+  @include on-tablet {
+    height: $footer-height-table;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    padding-block: 32px;
+
+    @include on-tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include on-tablet {
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    @include on-desktop {
+      gap: 100px;
+    }
+  }
+
+  &__link {
+    @include typography-uppercase;
+
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: center;
+
+    &-text {
+      @include typography-small-text;
+
+      color: var(--color-secondary);
+    }
+  }
+
+  &__logo {
+    width: 88px;
+    height: 32px;
+  }
+}

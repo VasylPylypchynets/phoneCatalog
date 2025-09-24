@@ -1,0 +1,77 @@
+@import '../../styles/mixins';
+@include skeleton-animatio;
+
+.skeleton {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+  @include container-main-inline;
+
+  .title {
+    @include skeleton-shimmer-bg;
+
+    height: 46px;
+    width: 300px;
+    border-radius: 6px;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .carouselArrow {
+      @include skeleton-shimmer-bg;
+
+      width: 40px;
+      height: 350px;
+      border-radius: 20px;
+    }
+
+    .carouselImage {
+      @include skeleton-shimmer-bg;
+
+      flex: 1;
+      height: 350px;
+      border-radius: 12px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .cardImage {
+        @include skeleton-shimmer-bg;
+
+        height: 180px;
+        border-radius: 8px;
+      }
+
+      .cardName {
+        @include skeleton-shimmer-bg;
+
+        height: 20px;
+        width: 80%;
+        border-radius: 4px;
+      }
+
+      .cardPrice {
+        @include skeleton-shimmer-bg;
+
+        height: 20px;
+        width: 50%;
+        border-radius: 4px;
+      }
+    }
+  }
+}

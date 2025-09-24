@@ -1,0 +1,37 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.not-found-page {
+  background-color: var(--color-hover-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  height: 75vh;
+  background-image: url('../img/page-not-found.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+
+  @include main-container-height;
+
+  &__text {
+    @include typography-body-text;
+
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  &__link {
+    @include typography-body-text;
+
+    color: var(--color-primary);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-icons);
+    }
+  }
+}

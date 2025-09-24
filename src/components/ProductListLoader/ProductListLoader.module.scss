@@ -1,0 +1,45 @@
+@import '../../styles/mixins';
+@include skeleton-animatio;
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .breadcrumb {
+    @include skeleton-shimmer-bg;
+
+    height: 20px;
+    width: 150px;
+    border-radius: 4px;
+  }
+
+  .title {
+    @include skeleton-shimmer-bg;
+
+    height: 32px;
+    width: 250px;
+    border-radius: 6px;
+  }
+
+  .filters {
+    @include skeleton-shimmer-bg;
+
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    @include skeleton-shimmer-bg;
+
+    height: 300px;
+    border-radius: 8px;
+  }
+}

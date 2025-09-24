@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  @include on-tablet {
+    gap: 64px;
+  }
+
+  @include on-desktop {
+    flex-direction: row;
+  }
+
+  &-about {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  &-title {
+    @include typography-h3;
+
+    color: var(--color-primary);
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-elements);
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-title {
+      @include typography-h4;
+
+      color: var(--color-primary);
+    }
+
+    &-text {
+      @include typography-body-text;
+
+      color: var(--color-secondary);
+    }
+  }
+
+  &-specs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    gap: 32px;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

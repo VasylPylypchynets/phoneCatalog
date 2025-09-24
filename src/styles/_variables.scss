@@ -1,0 +1,49 @@
+$padding-inline-mobile: 16px;
+$padding-inline-tablet: 24px;
+$padding-inline-desktop: 152px;
+$header-height-mobile: 48px;
+$header-height-desktop: 64px;
+$footer-height-mobile: 284px;
+$footer-height-table: 100px;
+
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --color-accent: #216cff;
+  --color-secondary-accent: #f447af;
+  --color-primary: #0f0f11;
+  --color-secondary: #89939a;
+  --color-icons: #b4bdc3;
+  --color-elements: #e2e6e9;
+  --color-hover-bg: #fafbfc;
+  --color-black-white: #fff;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+  --color-shadow-banner-button: rgba(99, 99, 99, 0.2);
+  --color-shadow-card-button: rgba(23, 32, 49, 0.4);
+  --color-shadow-card-checkout-button: rgba(149, 157, 165, 0.2);
+  --color-shadow-primary-button: rgba(23, 32, 49, 0.4);
+  --color-shadow-product-card: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --color-accent: #3d82ff;
+  --color-secondary-accent: #ff5fbc;
+  --color-primary: #fff;
+  --color-secondary: #a0a6ab;
+  --color-icons: #8c959d;
+  --color-elements: #2a2f33;
+  --color-hover-bg: #1e1e1e;
+  --color-black-white: black;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+  --color-shadow-banner-button: rgba(255, 255, 255, 0.18);
+  --color-shadow-card-button: rgba(255, 255, 255, 0.16);
+  --color-shadow-card-checkout-button: rgba(255, 255, 255, 0.22);
+  --color-shadow-primary-button: rgba(255, 255, 255, 0.18);
+  --color-shadow-product-card: rgba(255, 255, 255, 0.14);
+}
+
+
